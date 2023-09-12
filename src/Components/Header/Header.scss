@@ -1,0 +1,15 @@
+#header {
+
+display:flex;
+flex-direction: row;
+
+  #logo-div {
+    height: 100px;
+    padding: 1rem;
+
+    img {
+      height: 100%;
+    }
+  }
+
+}

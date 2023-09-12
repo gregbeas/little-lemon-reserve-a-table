@@ -1,0 +1,19 @@
+#footer {
+  #footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .footer_logo {
+    width: 75%;
+    margin: 0 auto;
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 50px;
+  }
+}
