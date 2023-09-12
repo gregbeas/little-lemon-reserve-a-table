@@ -1,3 +1,11 @@
+:root {
+  --colorGreenPrimary: #495E57;
+  --colorWhite: #fff;
+  --colorBlack: #000000;
+  --colorYellowPrimary: #f4Ce14;
+}
+
+
 /* Begin Resets */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -25,3 +33,61 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 /* End Resets */
+
+// Begin Utility Classes
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.grid {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+// End Utility Classes
+
+//Default Styling begin
+
+a {
+  text-decoration: none;
+  color: black;
+  transition: all 400ms ease;
+  font-weight: 600;
+  &:hover {
+    color: var(--colorGreenPrimary);
+  }
+}
+
+li {
+  list-style: none;
+}
+
+::selection {
+  background: var(--colorGreenPrimary);
+  color: var(--colorWhite);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: var(--colorWhite);
+}
+
+::-webkit-scrollbar-thumb {
+  width: 10px;
+  background: var(--colorGreenPrimary);
+  border-radius: 3rem;
+}

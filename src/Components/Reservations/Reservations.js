@@ -8,7 +8,9 @@ import Footer from "../../Components/Footer/Footer"
 const Reservations = () => {
   return <>
     <Header />
-    <h1>Reservations</h1>
+    <section id="reservations">
+      <h1>Reservations</h1>
+    </section>
     <Footer />
   </>
 }

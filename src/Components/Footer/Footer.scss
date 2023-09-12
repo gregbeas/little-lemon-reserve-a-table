@@ -1,13 +1,24 @@
 #footer {
+  a {
+    text-decoration: underline;
+  }
+
   #footer-info {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   .footer_logo {
-    width: 75%;
+    width: clamp(150px, 40%, 250px);
     margin: 0 auto;
+  }
+
+  hr {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
   }
 
   .socials {
@@ -15,5 +26,14 @@
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 50px;
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: all 300ms ease;
+      &:hover {
+      transform: translateY(-3px);
+      }
+    }
   }
 }
