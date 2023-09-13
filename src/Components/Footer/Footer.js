@@ -26,11 +26,12 @@ const Footer = () => {
             <li><p>(123) 456-7890</p></li>
             <li>123 Main St, Chicago, Il 12345</li>
             <br/>
-            <li>Hours:</li>
+            <li><b>Hours:</b></li>
             <li>
-                <li>Sun: 10 AM - 7 PM</li>
-                <li>Mon: CLOSED</li>
-                <li>Tues - Sat: 10 AM - 10 PM</li>
+                Sun: 10 AM - 7 PM<br></br>
+                Mon: CLOSED<br></br>
+                Tues - Thur: 10 AM - 8 PM<br></br>
+                Fri - Sat: 10 AM - 10 PM<br></br>
             </li>
           </ul>
         </div>

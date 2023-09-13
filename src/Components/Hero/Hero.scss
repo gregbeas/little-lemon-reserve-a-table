@@ -1,3 +1,51 @@
 #hero {
   padding-top: 4.5rem;
+  background: var(--colorGreenPrimary);
+  h1 {
+    font-family: var(--fontKarla);
+    color: var(--colorYellowPrimary);
+  }
+  h2 {
+    font-family: var(--fontMarkazi);
+    color: var(--colorWhite);
+    padding-bottom: 2rem;
+  }
+
+  .hero-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    position: relative;
+  }
+
+  img {
+    margin-top: 2rem;
+    border-radius: var(--borderRadius);
+  }
+
+  button {
+    background: var(--colorYellowPrimary);
+    border: none;
+    position: absolute;
+    right: 0;
+    transform: translateY(-50%);
+    transition: all 300ms ease;
+    &:hover {
+      background: var(--colorYellowAccent);
+    }
+    &:active {
+      background: var(--colorYellowAccent);
+    }
+  }
+
+  @media only screen and (min-width: 900px) {
+    .hero-content {
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    img {
+      margin-bottom: 2rem;
+    }
+  }
 }

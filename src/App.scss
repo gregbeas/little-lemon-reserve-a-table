@@ -1,8 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla&family=Markazi+Text&display=swap');
+
+
 :root {
   --colorGreenPrimary: #495E57;
+  --colorGreenAccent: #919e9a;
   --colorWhite: #fff;
   --colorBlack: #000000;
   --colorYellowPrimary: #f4Ce14;
+  --colorYellowAccent: #faeba1;
+  --fontKarla: 'Karla', sans-serif;
+  --fontMarkazi: 'Markazi Text', serif;
+  --borderRadius: 16px;
+  --h1FontSize: clamp(2.027rem, 0.3775rem + 4.5833vw, 3.815rem);
+  --h2FontSize: clamp(1.85rem, 0.2rem + 3.75vw, 3.25rem);
 }
 
 
@@ -18,6 +28,7 @@
 body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
+  font-family: var(--fontKarla);
 }
 
 img, picture, video, canvas, svg {
@@ -76,6 +87,16 @@ li {
   list-style: none;
 }
 
+h1 {
+  font-size: var(--h1FontSize);
+  font-family: var(--fontKarla);
+}
+
+h2 {
+  font-size: var(--h2FontSize);
+  font-family: var(--fontMarkazi);
+}
+
 ::selection {
   background: var(--colorGreenPrimary);
   color: var(--colorWhite);
@@ -88,6 +109,35 @@ li {
 
 ::-webkit-scrollbar-thumb {
   width: 10px;
-  background: var(--colorGreenPrimary);
+  background: var(--colorGreenAccent);
   border-radius: 3rem;
+}
+
+button {
+  border-radius: var(--borderRadius);
+  padding: 0.75rem;
+  cursor: pointer;
+}
+
+.secContainer {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+
+@media only screen and (min-width: 950px) and (max-width: 1300px) {
+  .secContainer {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-width: 1301px) and (max-width: 1600px) {
+  .secContainer {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1601px) {
+  .secContainer {
+    width: 65%;
+  }
 }
