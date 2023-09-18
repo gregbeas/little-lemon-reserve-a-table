@@ -118,16 +118,92 @@
     &:active {
       background: var(--colorYellowAccent)
     }
+    &:disabled {
+      cursor: not-allowed;
+      background: lightgray;
+    }
+  }
+
+  .progress {
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    background: lightgray;
+    border-radius: 16px 8px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .indicator-wrapper {
+    border-radius: 16px 8px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2%;
+  }
+
+  .progress-indicator {
+    height: 1rem;
+    background: var(--colorGreenPrimary);
+    width: 49%;
+    transition: all 400ms ease-out;
+  }
+
+  #progress-indicator_2 {
+    background: linear-gradient(to right, var(--colorGreenPrimary) 50%, #b6bebb 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    border-radius: 0 8px 16px 0;
   }
 
   .back-button {
     background: #EE9972;
     margin: 0 auto;
+    color: var(--colorWhite);
+
+    &:hover {
+      background: #f3b79c;
+    }
+
+    &:active {
+      background: #f3b79c;
+    }
+  }
+
+  .next-button {
+    background: var(--colorGreenPrimary);
+    color: var(--colorWhite);
+
+    &:hover {
+      background: var(--colorGreenAccent);
+    }
+
+    &:active {
+      background: var(--colorGreenAccent);
+    }
+  }
+
+  .button-wrapper {
+    max-width: 500px;
+    margin: 2rem auto;
   }
 
   a {
     display: contents;
     align-items: center;
+  }
+
+  .formData {
+    font-size: 24px;
+    font-weight: 600;
+
+    span {
+      color: var(--colorGreenPrimary)
+    }
   }
 
 }

@@ -1,43 +1,18 @@
 import React from 'react';
-import { useState } from 'react';
 import './Reservations.scss';
 
 import { FaClock } from 'react-icons/fa';
 import { FaRegUser } from 'react-icons/fa';
 import { FaWineBottle } from 'react-icons/fa';
 
-const ReservationsInfo = () => {
-  const [date, setDate] = useState('');
-  const [time, setTime] = useState('');
-  const [party, setParty] = useState('');
-  const [occasion, setOccasion] = useState('');
-  const [locationPreference, setLocationPreference] = useState('no preference');
-  // const [name, setName] = useState('');
-  // const [phone, setPhone] = useState('');
-  // const [email, setEmail] = useState('');
+const ReservationsInfo = ({ formData, setFormData }) => {
 
-  const formData = {
-    date: date,
-    time: time,
-    party: party,
-    occasion: occasion,
-    locationPreference: locationPreference,
-    // name: name,
-    // phone: phone,
-    // email: email,
-  }
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('form submitted!');
-    console.log(formData);
-  };
   return (
     <>
       <section id="reservations-info">
         <h2>Little Lemon</h2>
         <h1>Reservations</h1>
-        <form className="reservations-form" onSubmit={handleSubmit}>
+        <div className="reservations-form" id="form1">
           <div className="input-div">
             <label htmlFor="date">Date:</label>
             <div className="input-wrapper">
@@ -45,11 +20,12 @@ const ReservationsInfo = () => {
                 type="date"
                 id="date"
                 name="date"
-                value={date}
+                value={formData.date}
                 onChange={(e) =>
-                  setDate(
-                    e.target.value
-                  )
+                  setFormData({
+                    ...formData,
+                    date: e.target.value,
+                  })
                 }
                 className="input"
                 required
@@ -60,16 +36,21 @@ const ReservationsInfo = () => {
             <label htmlFor="time">Time: </label>
             <div className="input-wrapper">
               <select
-                name= "time"
-                value={time}
+                name="time"
+                value={formData.time}
                 onChange={(e) =>
-                  setTime(e.target.value)
+                  setFormData({
+                    ...formData,
+                    time: e.target.value,
+                  })
                 }
                 id="time"
                 className="input"
                 required
               >
-                <option value="" disabled>What time? </option>
+                <option value="" disabled>
+                  What time?{' '}
+                </option>
                 <option value="5:00">5:00 PM</option>
                 <option value="5:30">5:30 PM</option>
                 <option value="6:00">6:00 PM</option>
@@ -87,14 +68,19 @@ const ReservationsInfo = () => {
               <select
                 id="party"
                 name="party"
-                value={party}
+                value={formData.party}
                 onChange={(e) =>
-                  setParty(e.target.value)
+                  setFormData({
+                    ...formData,
+                    party: e.target.value,
+                  })
                 }
                 className="input"
                 required
               >
-                <option value="" disabled>How many people?</option>
+                <option value="" disabled>
+                  How many people?
+                </option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -118,12 +104,17 @@ const ReservationsInfo = () => {
                 id="occasion"
                 name="occasion"
                 className="input"
-                value={occasion}
+                value={formData.occasion}
                 onChange={(e) =>
-                  setOccasion(e.target.value)
+                  setFormData({
+                    ...formData,
+                    occasion: e.target.value,
+                  })
                 }
               >
-                <option value="" disabled>Celebrating?</option>
+                <option value="" disabled>
+                  Celebrating?
+                </option>
                 <option value="birthday">Birthday</option>
                 <option value="anniversary">Anniversary</option>
                 <option value="date-night">Date Night</option>
@@ -132,15 +123,18 @@ const ReservationsInfo = () => {
               <FaWineBottle color="#495E57" className="icon" />
             </div>
           </div>
-          <div className="radio">
+          <div className="radio" id="radio">
             <div className="radio-option">
               <label htmlFor="indoors">indoors</label>
               <input
                 type="radio"
                 id="indoors"
                 name="locationPreference"
-                onClick={() =>
-                  setLocationPreference("indoors")
+                onClick={(e) =>
+                  setFormData({
+                    ...formData,
+                    locationPreference: e.target.value,
+                  })
                 }
                 value="indoors"
               ></input>
@@ -151,8 +145,11 @@ const ReservationsInfo = () => {
                 type="radio"
                 id="outdoors"
                 name="locationPreference"
-                onClick={() =>
-                  setLocationPreference("outdoors")
+                onClick={(e) =>
+                  setFormData({
+                    ...formData,
+                    locationPreference: e.target.value,
+                  })
                 }
                 value="outdoors"
               ></input>
@@ -164,15 +161,19 @@ const ReservationsInfo = () => {
                 id="no-preference"
                 name="locationPreference"
                 value="no preference"
-                onClick={() =>
-                  setLocationPreference("no preference")
+                onClick={(e) =>
+                  setFormData({
+                    ...formData,
+                    locationPreference: e.target.value,
+                  })
                 }
                 defaultChecked="true"
               ></input>
             </div>
           </div>
-            {/* <button type="submit">Next</button> */}
-        </form>
+          {/* <button type="submit" disabled={submitDisabled}>Submit</button>
+            <button type="button" disabled={editDisabled} onClick={handleEdit}>Edit</button> */}
+        </div>
       </section>
     </>
   );

@@ -1,14 +1,13 @@
-import React, {useState} from 'react';
 import './Reservations.scss';
 
-const ConfirmReservation = () => {
+const ConfirmReservation = ({formData, setFormData}) => {
 
   return (
     <>
       <section id="reservations-confirm">
         <h2>Little Lemon</h2>
         <h1>Confirm Reservation</h1>
-        <form className="reservations-form">
+        <div className="reservations-form" id="form2">
           <div className="input-div">
             <label htmlFor="name">Name: </label>
             <div className="input-wrapper">
@@ -18,12 +17,19 @@ const ConfirmReservation = () => {
                 name="name"
                 className="input"
                 placeholder="name"
+                value= {formData.name}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    name: e.target.value,
+                  })
+                }
                 required
               ></input>
             </div>
           </div>
           <div className="input-div">
-            <label htmlFor="email">Name: </label>
+            <label htmlFor="email">Email: </label>
             <div className="input-wrapper">
               <input
                 type="email"
@@ -31,6 +37,13 @@ const ConfirmReservation = () => {
                 name="email"
                 className="input"
                 placeholder="example@email.com"
+                value={formData.email}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    email: e.target.value,
+                  })
+                }
                 required
               ></input>
             </div>
@@ -43,17 +56,21 @@ const ConfirmReservation = () => {
                 id="phone"
                 name="phone"
                 className="input"
+                title="0123456789"
                 placeholder="0123456789"
                 pattern="[0-9]{10}"
+                value={formData.phone}
+                onChange={(e) =>
+                  setFormData({
+                    ...formData,
+                    phone: e.target.value,
+                  })
+                }
                 required
               ></input>
             </div>
           </div>
-            {/* <button className="back-button" type="button">
-              <FaArrowCircleLeft /> Back
-            </button> */}
-          <button type="submit">Make Reservation</button>
-        </form>
+        </div>
       </section>
     </>
   );
