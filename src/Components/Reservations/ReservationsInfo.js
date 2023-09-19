@@ -117,8 +117,8 @@ const ReservationsInfo = ({ formData, setFormData }) => {
                 </option>
                 <option value="birthday">Birthday</option>
                 <option value="anniversary">Anniversary</option>
-                <option value="date-night">Date Night</option>
-                <option value="business-meal">Business Meal</option>
+                <option value="date night">Date Night</option>
+                <option value="business meal">Business Meal</option>
               </select>
               <FaWineBottle color="#495E57" className="icon" />
             </div>

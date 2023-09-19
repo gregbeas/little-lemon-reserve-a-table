@@ -1,7 +1,12 @@
 import React, { useState } from 'react';
 
+import {submitAPI} from '../../api/api.js'
+
+import { useNavigate } from "react-router-dom";
+
 import ReservationsInfo from './ReservationsInfo';
 import ConfirmReservation from './ConfirmReservation';
+import ConfirmedReservation from './ConfirmedReservation.js';
 
 import { FaArrowCircleLeft, FaArrowCircleRight } from 'react-icons/fa';
 
@@ -40,8 +45,19 @@ const Form = () => {
       return <ReservationsInfo formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
       return <ConfirmReservation formData={formData} setFormData={setFormData} />;
+    } else if (page ===2) {
+      return <ConfirmedReservation formData={formData} setFormData={setFormData} page={page} setPage={setPage}/>;
     }
   };
+
+  const submitForm = (formData) => {
+    const isSubmitted = submitAPI(formData);
+
+    if (isSubmitted) {
+      setPage(2);
+    }
+
+  }
 
   return (
     <form>
@@ -65,7 +81,7 @@ const Form = () => {
         </div>
         {PageDisplay()}
       </div>
-      <div className="button-wrapper">
+      <div style={page === 2 ? {display: 'none'} : {display: 'block'}} className="button-wrapper">
         <button
           className="back-button"
           disabled={page === 0}
@@ -84,19 +100,8 @@ const Form = () => {
           } else if (page === 1 && pageTwoValid() === true) {
             e.preventDefault()
             console.log(formData);
-            //POST TO API HERE
             alert('Reservation confirmation will be sent to your email! See you soon!')
-            setFormData({
-              date: '',
-              time: '',
-              party: '',
-              occasion: '',
-              locationPreference: 'no preference',
-              name: '',
-              phone: '',
-              email: '',
-            })
-            setPage(0);
+            submitForm(formData);
         }
         }}>
           {page === 1 ? 'Make Reservation' : 'Next'}

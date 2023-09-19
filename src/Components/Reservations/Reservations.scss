@@ -197,12 +197,14 @@
     align-items: center;
   }
 
-  .formData {
-    font-size: 24px;
-    font-weight: 600;
+  .confirmed-text {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 1rem;
 
     span {
-      color: var(--colorGreenPrimary)
+      color: var(--colorGreenPrimary);
+      font-weight: 700;
     }
   }
 

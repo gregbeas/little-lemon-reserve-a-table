@@ -17,7 +17,7 @@ const Hero = () => {
             <h1>Little Lemon</h1>
             <h2>Chicago</h2>
           </div>
-          <Link to="/reservations"><button>Reserve a Table</button></Link>
+          <Link to="/reservations"><button><p>Reserve a Table</p></button></Link>
         </div>
       </div>
     </section>

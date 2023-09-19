@@ -11,8 +11,9 @@
   --fontKarla: 'Karla', sans-serif;
   --fontMarkazi: 'Markazi Text', serif;
   --borderRadius: 16px;
-  --h1FontSize: clamp(2.027rem, 0.3775rem + 4.5833vw, 3.815rem);
-  --h2FontSize: clamp(1.85rem, 0.2rem + 3.75vw, 3.25rem);
+  --h1FontSize: clamp(2rem, 4vw, 3.5rem);
+  --h2FontSize: clamp(1.85rem, 3vw, 2.75rem);
+  --pFontSize: clamp(1rem, 2vmin, 32px);
 }
 
 
@@ -29,6 +30,7 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: var(--fontKarla);
+  font-size: var(--pFontSize);
 }
 
 img, picture, video, canvas, svg {
@@ -90,11 +92,16 @@ li {
 h1 {
   font-size: var(--h1FontSize);
   font-family: var(--fontKarla);
+
 }
 
 h2 {
   font-size: var(--h2FontSize);
   font-family: var(--fontMarkazi);
+}
+
+p {
+  font-size: var(--pFontSize);
 }
 
 ::selection {
