@@ -37,9 +37,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="socials">
-        <button><FaInstagramSquare size={25} className="footer_icon" color="#495E57"/></button>
-        <button><FaFacebook size={25}className="footer_icon" color="#495E57"/></button>
-        <button><FaTwitter size={25} className="footer_icon" color="#495E57"/></button>
+        <button><FaInstagramSquare size={25} className="footer_icon"/></button>
+        <button><FaFacebook size={25}className="footer_icon"/></button>
+        <button><FaTwitter size={25} className="footer_icon"/></button>
       </div>
     </footer>
   </>

@@ -70,6 +70,7 @@
   .menu ul {
     flex-direction: column;
     align-items: flex-start;
+    margin-top: 20vh;
   }
 
   .menu {
@@ -78,7 +79,7 @@
       z-index: 1000;
       inset: 0 0 0 50%;
       flex-direction: column;
-      padding: min(30vh, 10rem) 2rem;
+      // padding: min(30vh, 10rem) 2rem;
       background-color: hsl(359 100% 0% / 0.5);
       backdrop-filter: blur(2rem);
       transform: translateX(100%);
@@ -123,11 +124,14 @@
       backdrop-filter: none;
       background-color: transparent;
       transform: none;
+      margin-top: 0;
+      margin-right: 3rem;
     }
 
     .menu ul {
       flex-direction: row;
       align-items: center;
+      margin-top: 0;
     }
 
     .nav-item {

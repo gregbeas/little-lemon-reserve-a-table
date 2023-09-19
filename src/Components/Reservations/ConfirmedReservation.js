@@ -1,10 +1,7 @@
 import React from 'react';
 import './Reservations.scss';
 
-import Header from '../../Components/Header/Header';
-import Footer from '../../Components/Footer/Footer';
-
-const ConfirmedReservation = ({formData, setFormData, page, setPage}) => {
+const ConfirmedReservation = ({formData, setFormData, setPage}) => {
 
   const dateFormatter = (date) => {
     const splitDate = date.split("-");
@@ -46,6 +43,8 @@ const ConfirmedReservation = ({formData, setFormData, page, setPage}) => {
       case '12':
         month = "December";
         break;
+      default:
+        console.log('Something went wrong!')
     }
     const formattedDate = `${splitDate[2]} ${month}, ${splitDate[0]}`;
     return formattedDate;

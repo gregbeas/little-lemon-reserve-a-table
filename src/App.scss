@@ -14,6 +14,8 @@
   --h1FontSize: clamp(2rem, 4vw, 3.5rem);
   --h2FontSize: clamp(1.85rem, 3vw, 2.75rem);
   --pFontSize: clamp(1rem, 2vmin, 32px);
+  --selectionBackground: #495E57;
+  --selectionColor: #fff;
 }
 
 
@@ -24,6 +26,10 @@
 
 * {
   margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -105,8 +111,8 @@ p {
 }
 
 ::selection {
-  background: var(--colorGreenPrimary);
-  color: var(--colorWhite);
+  background: var(--selectionBackground);
+  color: var(--selectionColor);
 }
 
 ::-webkit-scrollbar {

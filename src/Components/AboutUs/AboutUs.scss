@@ -1,0 +1,40 @@
+#about-us {
+
+  margin-top: 3rem;
+  text-align: center;
+  .wrapper {
+    text-align: left;
+    background: var(--colorGreenPrimary);
+    border-radius: var(--borderRadius);
+    display: flex;
+    flex-direction: column;
+
+    img {
+      border-radius: 16px 16px 0 0;
+    }
+
+    p {
+      --selectionColor: var(--colorGreenPrimary);
+      --selectionBackground: var(--colorWhite);
+      color: var(--colorWhite);
+      padding: 1rem;
+    }
+
+    span {
+      color: var(--colorYellowPrimary);
+      font-weight: 600;
+    }
+  }
+
+  @media only screen and (min-width: 800px) {
+    .wrapper {
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        width: 50%;
+        border-radius: 16px 0 0 16px;
+      }
+    }
+  }
+}

@@ -1,4 +1,6 @@
 #footer {
+  margin-top: 8rem;
+
   a {
     text-decoration: underline;
   }
@@ -34,8 +36,15 @@
       border: none;
       cursor: pointer;
       transition: all 300ms ease;
+      .footer_icon {
+        color: var(--colorGreenPrimary);
+        transition: all 300ms ease;
+      }
       &:hover {
       transform: translateY(-3px);
+      .footer_icon {
+        color: var(--colorYellowPrimary);
+      }
       }
     }
   }

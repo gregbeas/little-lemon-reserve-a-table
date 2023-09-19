@@ -1,0 +1,43 @@
+#highlights {
+  margin-top: 5rem;
+
+  .card-container {
+    max-width: 1000px;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .card {
+    position: relative;
+    background: var(--colorGreenPrimary);
+    border-radius: var(--borderRadius);
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+
+    img {
+      width: 75%;
+      max-height: 300px;
+      border-radius: 0 16px 16px 0;
+      object-fit: cover;
+      object-position: left bottom;
+      aspect-ratio: 16/9;
+    }
+  }
+
+  h2{
+    background: var(--colorYellowPrimary);
+    font-family: var(--fontKarla);
+    padding: 0.5rem;
+    border-radius: var(--borderRadius);
+    width: 33%;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    z-index: 500;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 25%;
+    box-shadow: 10px 10px 51px 0px rgba(0,0,0,0.75);
+  }
+}

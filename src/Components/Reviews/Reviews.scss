@@ -1,0 +1,36 @@
+#reviews {
+  text-align: center;
+  margin-top: 3rem;
+  h2 {
+    margin-bottom: 4rem;
+  }
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .review-card {
+    background-color: #D9D9D9;
+    padding: 1rem;
+    border-radius: var(--borderRadius);
+    text-align: left;
+    box-shadow: 10px 10px 20px 0px rgba(0,0,0,0.75);
+  }
+
+  .name {
+    font-style: italic;
+    font-weight: 700;
+  }
+
+  .review {
+    margin-left: 0.75rem;
+  }
+
+  @media only screen and (min-width: 800px) {
+    .card-wrapper {
+      flex-direction: row;
+    }
+  }
+}

@@ -1,4 +1,7 @@
 #hero {
+  --selectionColor: var(--colorGreenPrimary);
+  --selectionBackground: var(--colorWhite);
+
   padding-top: 4.5rem;
   background: var(--colorGreenPrimary);
   h1 {
