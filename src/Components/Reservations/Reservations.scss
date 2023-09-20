@@ -50,10 +50,8 @@
       outline-color: var(--colorYellowPrimary);
     }
   }
-  input[type="date"] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    min-height: 1.2em;
+  input[type="date"]::-webkit-date-and-time-value {
+    min-height: 1.5em;
   }
 
   .icon{
