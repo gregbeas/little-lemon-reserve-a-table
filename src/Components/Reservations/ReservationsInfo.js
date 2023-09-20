@@ -28,6 +28,7 @@ const ReservationsInfo = ({ formData, setFormData }) => {
                   })
                 }
                 className="input"
+                placeholder='When?'
                 required
               ></input>
             </div>
