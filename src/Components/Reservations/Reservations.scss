@@ -50,6 +50,11 @@
       outline-color: var(--colorYellowPrimary);
     }
   }
+  input[type="date"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    min-height: 1.2em;
+  }
 
   .icon{
     margin-right: 1rem;
